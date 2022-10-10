@@ -124,7 +124,7 @@ model-index:
     metrics:
     - name: Test WER
       type: wer
-      value: 0.02900409225488902
+      value: 2.9
   - task:
       name: Automatic Speech Recognition
       type: automatic-speech-recognition
@@ -138,7 +138,7 @@ model-index:
     metrics:
     - name: Test WER
       type: wer
-      value: 0.058885821262433344
+      value: 5.9
 pipeline_tag: automatic-speech-recognition
 license: apache-2.0
 ---
