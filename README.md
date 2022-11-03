@@ -346,12 +346,14 @@ There are also potential dual use concerns that come with releasing Whisper. Whi
 
 
 ### BibTeX entry and citation info
-*Since no official citation was provided, we use the following in the mean time*
 ```bibtex
-@misc{radford2022whisper,
-      title={Robust Speech Recognition via Large-Scale Weak Supervision.}, 
-      author={Alec Radford, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, Ilya Sutskever},
-      year={2022},
-      url={https://cdn.openai.com/papers/whisper.pdf},
+@techreport{radford22_whipser,
+  title="{Robust Speech Recognition via Large-Scale Weak Supervision}",
+  author={Radford, Alec and Kim, Jong Wook and Xu, Tao and Brockman, Greg and McLeavey, Christine and Sutskever, Ilya},
+  journal={Technical Report, OpenAI},
+  url={https://cdn.openai.com/papers/whisper.pdf},
+  year={2022},
+  type={Technical report},
+  institution={OpenAI}
 }
 ```
