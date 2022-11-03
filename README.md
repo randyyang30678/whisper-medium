@@ -226,7 +226,7 @@ transcription.
 
 ```python
 >>> from transformers import WhisperProcessor, WhisperForConditionalGeneration
->>> from datasets import load_dataset
+>>> from datasets import Audio, load_dataset
 >>> import torch
 
 >>> # load model and processor
@@ -235,7 +235,7 @@ transcription.
 
 >>> # load dummy dataset and read soundfiles
 >>> ds = load_dataset("common_voice", "fr", split="test", streaming=True)
->>> ds = ds.cast_column("audio", datasets.Audio(sampling_rate=16_000))
+>>> ds = ds.cast_column("audio", Audio(sampling_rate=16_000))
 >>> input_speech = next(iter(ds))["audio"]["array"]
 >>> model.config.forced_decoder_ids = processor.get_decoder_prompt_ids(language = "fr", task = "transcribe")
 >>> input_features = processor(input_speech, return_tensors="pt").input_features 
@@ -254,7 +254,7 @@ The "<|translate|>" is used as the first decoder input token to specify the tran
 
 ```python
 >>> from transformers import WhisperProcessor, WhisperForConditionalGeneration
->>> from datasets import load_dataset
+>>> from datasets import Audio, load_dataset
 >>> import torch
 
 >>> # load model and processor
@@ -263,7 +263,7 @@ The "<|translate|>" is used as the first decoder input token to specify the tran
 
 >>> # load dummy dataset and read soundfiles
 >>> ds = load_dataset("common_voice", "fr", split="test", streaming=True)
->>> ds = ds.cast_column("audio", datasets.Audio(sampling_rate=16_000))
+>>> ds = ds.cast_column("audio", Audio(sampling_rate=16_000))
 >>> input_speech = next(iter(ds))["audio"]["array"]
 >>> # tokenize
 >>> input_features = processor(input_speech, return_tensors="pt").input_features 
