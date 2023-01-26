@@ -227,7 +227,7 @@ The "<|en|>" token is used to specify that the speech is in english and should b
 >>> input_features = processor(ds[0]["audio"]["array"], return_tensors="pt").input_features 
 
 >>> # Generate logits
->>> logits = model(input_features, decoder_input_ids = torch.tensor([[50258]]).logits 
+>>> logits = model(input_features, decoder_input_ids = torch.tensor([[50258]])).logits 
 >>> # take argmax and decode
 >>> predicted_ids = torch.argmax(logits, dim=-1)
 >>> transcription = processor.batch_decode(predicted_ids)
