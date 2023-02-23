@@ -214,5 +214,5 @@
     "transcribe": 50359,
     "translate": 50358
   },
-  "transformers_version": "4.26.0.dev0"
+  "transformers_version": "4.27.0.dev0"
 }
