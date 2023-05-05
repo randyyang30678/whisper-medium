@@ -363,7 +363,7 @@ can be run with batched inference. It can also be extended to predict sequence l
 
 >>> pipe = pipeline(
 >>>   "automatic-speech-recognition",
->>>   model="openai/whisper-large-v2",
+>>>   model="openai/whisper-medium",
 >>>   chunk_length_s=30,
 >>>   device=device,
 >>> )
